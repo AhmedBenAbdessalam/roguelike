@@ -49,7 +49,7 @@ impl MapBuilder {
     fn build_corridors(&mut self, rng: &mut RandomNumberGenerator) {
         let mut rooms = self.rooms.clone();
         rooms.sort_by(|a, b| a.center().x.cmp(&b.center().x));
-        for (id, room) in rooms.iter().skip(1).enumerate() {
+        for (id, room) in rooms.iter().enumerate().skip(1) {
             let prev = rooms[id - 1].center();
             let next = room.center();
             if rng.range(0, 2) == 1 {
