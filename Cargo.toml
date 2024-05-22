@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 bracket-lib = {git ="https://github.com/amethyst/bracket-lib" }
+legion = "0.4.0"
